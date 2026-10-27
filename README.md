@@ -1,34 +1,39 @@
 # my-freertos-lab
-This repository is an industry-oriented FreeRTOS labs with practical 
-examples, real-world use cases, debugging techniques, and RTOS design 
+This repository contains industry-oriented FreeRTOS labs with practical
+examples, real-world use cases, debugging techniques, and RTOS design
 concepts for my reference.
 
-Why RTOS [Real Time Operating System]?
-Answer
-Most of embedded products were built using a simple infinite loop.
-Codebase Hint: while(1) or while(true)
-This is a Super Loop Architecture.
-Some Examples:
-    - Flashing of LEDs with a fixed pattern
-    - Temperature Loggers System
-    - Simple Motor Controller
-which comes unders category of small products.
+## Why RTOS (Real-Time Operating System)?
 
-Now think about Modern IoT Node has following responsibities:
-    - Read sensors data
-    - WiFi Communication
-    - MQTT Communication
-    - OTA Update
-    - Data Logging
-    - Watchdog Monitoring
-    - Daignostics
-Managing these many activities inside single loop quickly introduces 
-software complexity and becomes difficult to maintain, debug and 
-scale.
+Most embedded products were built using a **simple infinite loop**. This is
+called a **super loop architecture**.
 
-RTOS has a mechanism to:
-    - Run multiple activities independently
-    - Assign priorities to activities
-    - Meet timing deadlines
-    - Improve software maintainability, reliability and scalability
+Codebase hint: `while (1)` or `while (true)`
+
+Some examples of small products using a super loop:
+- Flashing LEDs with a fixed pattern
+- Temperature logger system
+- Simple motor controller
+
+Now think about a modern IoT node. 
+It has to:
+- Read sensor data
+- Communicate over Wi-Fi
+- Communicate using MQTT
+- Perform OTA updates
+- Log data
+- Monitor a watchdog
+- Run diagnostics
+
+Managing all these activities inside a single loop quickly increases
+software complexity and makes the system difficult to maintain, debug,
+and scale.
+
+An RTOS provides a mechanism to:
+- Run multiple activities independently
+- Assign priorities to activities
+- Meet timing deadlines
+- Improve software maintainability, reliability and scalability
+
+
 
